@@ -1,9 +1,10 @@
 import React from 'react'
+import Nav from '../Nav.js';
 
 function About() {
   return (
-    <div>About</div>
+    <div><Nav/></div>
   )
 }
 
-export default About
+export default About;
