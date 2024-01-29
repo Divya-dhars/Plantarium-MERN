@@ -5,8 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link} from 'react-router-dom';
 import { IoPersonCircleSharp } from "react-icons/io5";
-import Homeimg from '../assets/bg2.jpg';
-import Homeimg1 from '../assets/bg2.jpg';
+
 function Nav() {
   const [isNavOpen,setIsNavOpen]=useState(false);
   const toggleNav=()=>{
@@ -57,7 +56,7 @@ function Nav() {
             <Link to='/' className='nav-link' reloadDocument>New Arrivals</Link>
           </li>
           <li>
-            <Link to='/' className='nav-link' reloadDocument>About Us</Link>
+            <Link to='/about' className='nav-link' reloadDocument>About Us</Link>
           </li>
         </ul>
       </div>
@@ -78,18 +77,7 @@ function Nav() {
         <Link to='/cart' reloadDocument className='nav-link'><FaShoppingCart size={30} color='#2d6a4f' /></Link>
       </div>
     </div>
-        <div className="home-grid">
-          <div className="text-grid">
-            <p className="title-text">Plants make a positive impact on your environment.</p>
-            <p className="title-text1">
-              Provide your house & office space with the right plants and let our <br/>plant care team keep them flourishing.Enhance the atmosphere of your house <br/> or office with our carefully selected collection of premium plants. From vibrant greens<br/> to elegant blooms, we have the perfect plants to suit your space.
-            </p>
-            <button className="explore-btn">Explore</button>
-          </div>
-          <div className="img-grid">
-            <img src={Homeimg}></img>
-          </div>
-        </div>
+       
    </>
   )
 }
