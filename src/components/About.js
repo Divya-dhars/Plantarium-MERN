@@ -1,10 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react';
 import Nav from '../components/Nav.js';
-import '../styles/About.css';
+import '../styles/About.css'; 
 import { TbTruckDelivery } from "react-icons/tb";
 import { PiPlantFill } from "react-icons/pi";
 import { PiPottedPlantFill } from "react-icons/pi";
-
+import { FaInstagram } from "react-icons/fa6";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 function Card({ title, content }) {
   return (
     <div className="card">
@@ -13,16 +15,20 @@ function Card({ title, content }) {
     </div>
   );
 }
+
 function About() {
+  
   return (
     <div>
       <Nav/>
     <div class="about-container1">
+     
+    </div>
       <div className="about-container">
-        <Card
+        {/* <Card
         title="Welcome to Plantoz"
         content="Plantoz is your go-to destination for all things plants. We are passionate about bringing nature into your life and helping you create a greener, more vibrant space."
-        />
+        /> */}
         <Card
         title=" Our Green Journey"
         content="Founded in 2024, Plantoz was born out of a love for plants and a desire to share that passion with the world. Our journey began with a small collection of plants and has since grown into a community dedicated to plant enthusiasts."
@@ -38,13 +44,8 @@ function About() {
         <Card
          title="Values"
          content="Plantoz is built on values such as sustainability, community, and education. We strive to source our plants responsibly, foster a supportive plant-loving community, and provide educational resources to empower our customers in their plant care journey."
-        />
-         <Card
-        title="Contact Us"
-        content="Have questions about plants or need advice on caring for your green friends? Don't hesitate to reach out via our <a href='/contact'>Contact page</a>."
-        />
+        /> 
       </div>
-    </div>
     <div className="image-cont"></div>
     <div class="icon-plantoz">
       <div class="icon1-plantoz">
@@ -53,13 +54,42 @@ function About() {
       </div>
       <div class="icon2-plantoz">
       <PiPlantFill size={50}/>
-      <p>Air Putifying Plants</p>
+      <p>Air Purifying Plants</p>
       </div>
       <div class="icon3-plantoz">
       <PiPottedPlantFill size={50}/>
       <p>Plants for home and Offices</p>
       </div>
     </div>
+    <footer className="about-footer">
+      <p style={{textAlign:'center',color:'#fff'}}>Contact Us</p>
+      <div class="contact-cont">
+        <div className="contact-us">
+          <p style={{color:'#fff'}}>Contact</p>
+          <div className="contact-way">
+          <FaInstagram size={20} color="#fff"/>
+          <span>_plantoz_official</span>
+          </div><br/>
+          <div className="contact-way">
+          <FaFacebookSquare size={20} color="#fff" />
+          <span>_plantozz</span>
+          </div><br/>
+          <div className="contact-way">
+          <FaXTwitter size={20} color="#fff"/>
+          <span>_plantozzX</span>
+          </div>
+        </div>
+        <div className="contact-form">
+          <form>
+            <label>Name:<input type="text" name="username"></input></label><br/><br/>
+            <label>Email:<input type="text" name="email"></input></label><br/><br/>
+            <label>Message:</label>
+            <label><textarea name="message"></textarea></label>
+            <button className="contact-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </footer>
   </div>
 
   )

@@ -137,9 +137,7 @@ li:hover::before {
 .home-grid{
     display: grid;
     grid-template-columns: 2fr 2fr;
-    margin:60px;
-    position: absolute;
-    
+    margin:0px 0px 0px 40px;
 }
 .text-grid .title-text{
    font-size: 60px;
@@ -171,11 +169,122 @@ li:hover::before {
     background-color: #2d6a4f;
  }
  .home-grid .img-grid img{
-    width:780px;
-    height:440px;
+    width:850px;
+    height:460px;
     border-radius: 50px;
     margin-top:120px;
     animation: fadeUp 1s ease-out; 
+ }
+ .home-grid1{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin:0px 0px 0px 40px;
+    
+}
+.text-grid1 .title-text1{
+   font-size: 60px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   line-height: 55px;
+   font-weight: bold;
+   margin-top:120px;
+   color:#2d6a4f;
+}
+.text-grid1 .title-text2{
+    margin-top: 20px;
+    font-size: 18px;
+    color:rgb(113, 107, 107);
+    line-height: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .text-grid1 .explore-btn1{
+    margin-top: 40px;
+    padding:10px 20px;
+    width:100px;
+    background-color: #fff;
+    border:2px solid #2d6a4f;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color:rgb(113, 107, 107);
+ }
+ .text-grid1 .explore-btn1:hover{
+    color:#fff;
+    background-color: #2d6a4f;
+ }
+ .home-grid1 .img-grid1 {
+    position: relative;
+  }
+  .home-grid1 .img-grid1 img{
+    width:850px;
+    height:460px;
+    border-radius: 50px;
+    margin-top:120px;
+    animation: fadeUp 1s ease-out; 
+ }
+  .home-grid1 .img-grid1 .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 850px;
+    height: 460px;
+    border-radius: 50px;
+    margin-top:120px;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .home-grid1 .img-grid1 .button-overlay .explore-btn1{
+    width:120px;
+    padding:10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    background-color:antiquewhite;
+    border:2px solid antiquewhite;
+  }
+  .home-grid1 .img-grid1 .button-overlay .explore-btn1:hover{
+    color:#fff;
+    background-color: #2d6a4f;
+    border:2px solid #2d6a4f;
+  }
+  .home-grid1 .img-grid1 .button-overlay {
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .home-grid1 .img-grid1:hover .hover-overlay {
+    opacity: 1;
+  }
+  
+  .home-grid1 .img-grid1:hover .button-overlay {
+    opacity: 1;
+  }
+ .t{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left:50px;
+    margin-top:50px;
+ }
+ .t .t-img1 img{
+   width:600px;
+   height:450px;
+   margin-bottom: 60px;
+   border-radius: 50px;
+ }
+ .t .t-img2 img{
+    margin-left:40px;
+    border-radius: 50px;
+    width:600px;
+    height:450px;
+ }
+ .t .t-img3 img{
+    margin-left:30px;
+    border-radius: 50px;
+    width:500px;
+    height:450px;
  }
  @keyframes fadeUp {
     0% {

@@ -1,31 +1,13 @@
-.about-container1{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-}
-.about-container1::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../assets/plant9.jpg'); /* Replace with the path to your background image */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.7; /* Adjust the opacity to your preference */
-}
+
+
 .about-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap:20px;
-    max-width: 1200px;
-    margin-left:100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap:0px;
     margin-top:150px;
     padding: 20px;
     opacity: 0;
     animation: fadeIn 1s forwards;
-  
     position: relative;
   }
   
@@ -51,24 +33,31 @@
   }
   .card {
     background-color:  rgba(255, 255, 255, 0.9);
+    border:1px solid rgb(206, 197, 197);
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
-    height:300px;
-    width:200px;
+    height:320px;
+    width:300px;
     opacity: 0;
     animation: fadeIn 1s forwards;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    
   }
   .card:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Slightly transparent on hover for the glass effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     color: #fff;
   }
 .card p {
   color: #555;
-  line-height: 1.6;
+  line-height: 1.4;
+  font-size: 18px;
+}
+.card h2{
+  font-size: 20px;
+  color: #2d6a4f;
+  font-weight: bold;
 }
 .icon-plantoz{
   display:grid;
@@ -76,10 +65,112 @@
   gap:20px;
   margin:40px;
 }
-.icon1-plantoz{
-  align-items: center;
-  justify-content: center;
+.icon1-plantoz,
+.icon2-plantoz,
+.icon3-plantoz{
+  margin-left:200px;
+  animation: fadeUp 1s ease-out; 
+  transition: transform 0.3s ease-in-out; 
 }
+.icon1-plantoz:hover,
+.icon2-plantoz:hover,
+.icon3-plantoz:hover {
+  transform: scale(1.1); /* Increase size on hover (you can adjust the scale factor) */
+}
+.about-footer {
+  background-color: #252422;
+  padding: 50px 0;
+}
+
+.about-footer p {
+  text-align: left;
+  font-size: 35px;
+  color: #2d6a4f;
+}
+
+.contact-cont {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-us,
+.contact-form {
+  padding: 10px;
+}
+
+.contact-us {
+  max-width: 400px;
+}
+
+.contact-way {
+  display: flex;
+  align-items: center;
+}
+
+.contact-way span {
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:#fff;
+}
+
+.contact-form label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 5px;
+  display: inline;
+  color:#fff;
+}
+
+.contact-form textarea {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #fff;
+  width: 100%; 
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 5px; 
+  border:#000;
+}
+.contact-form input,
+.contact-form textarea:focus-visible{
+  border:#b7e4c7;
+}
+.contact-btn{
+  padding:12px;
+  width:150px;
+  font-size: 18px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 2px solid #2d6a4f;
+  background-color: #faf3dd
+}
+.contact-btn:hover{
+  color:white;
+  background-color: #000;
+}
+@media (min-width: 768px) {
+  .icon-plantoz{
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items:start;
+    margin-left:-50px;
+  }
+  .contact-cont {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-form {
+    max-width: none; 
+  }
+}
+
   @keyframes fadeIn {
     from {
       opacity: 0;
