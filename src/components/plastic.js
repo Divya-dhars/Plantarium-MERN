@@ -2,12 +2,12 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import '../styles/indoor.css';
-import Plant4 from '../assets/hang.jpg';
-import Plant5 from '../assets/hang7.jpg';
-import Plant2 from '../assets/hang2.jpg';
-import Plant6 from '../assets/hang3.jpg';
-import Plant7 from '../assets/hang4.jpg';
-import Plant8 from '../assets/hang6.jpg';
+import Plant4 from '../assets/pot2.jpg';
+import Plant5 from '../assets/pot1.jpg';
+import Plant2 from '../assets/pot.jpg';
+import Plant6 from '../assets/pot3.jpg';
+import Plant7 from '../assets/pot4.jpg';
+import Plant8 from '../assets/pot6.jpg';
 
 function Indoor() {
   const plantGallery = [

@@ -41,8 +41,8 @@ function Nav() {
           </li>
           <li>
             <div className='dropdown'>
-              <Link to='/' className='nav-link' reloadDocument>Plastic pots</Link>
-              <Link to='/' className='nav-link' reloadDocument>Ceramic pots</Link>
+              <Link to='/plastic' className='nav-link' reloadDocument>Plastic pots</Link>
+              <Link to='/ceramic' className='nav-link' reloadDocument>Ceramic pots</Link>
               <Link to='/' className='nav-link' reloadDocument>Hanging pots</Link>
               <Link to='/' className='nav-link' reloadDocument>Plant stands</Link>
             </div>
