@@ -4,7 +4,6 @@ import { RiPlantFill } from "react-icons/ri";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";
 import { Link} from 'react-router-dom';
-import { IoPersonCircleSharp } from "react-icons/io5";
 
 function Nav() {
   const [isNavOpen,setIsNavOpen]=useState(false);
@@ -57,16 +56,6 @@ function Nav() {
           </li>
         </ul>
       </div>
-      {false ?
-        <div className='profile'>
-          <IoPersonCircleSharp size={40} />
-        </div> :
-        (<div className='loginbutton'>
-          <Link to='/loginregister' className='nav-link'>
-            <button className='login'>Login</button>
-          </Link>
-        </div>
-        )}
       <div className='whislist'>
         <Link to='/whislist' reloadDocument className='nav-link'><FaRegHeart size={30} color='#2d6a4f' /></Link>
       </div>

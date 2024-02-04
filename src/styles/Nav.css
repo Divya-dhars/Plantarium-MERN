@@ -286,6 +286,96 @@ li:hover::before {
     width:500px;
     height:450px;
  }
+ .t-img1,
+ .t-img2,
+ .t-img3{
+    position: relative;
+ }
+ .t-img1 .hover-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 450px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha (0.3) as per your preference */
+    opacity: 0;
+    transition: opacity 0.5s;
+ }
+ .t-img1:hover .hover-overlay{
+    opacity: 1;
+  }
+   .t-img2 .hover-overlay1{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right:0;
+    width:600px;
+    margin-left:10px;
+    height: 450px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    opacity: 0;
+    transition: opacity 0.5s ;
+ }
+ .t:hover .hover-overlay1{
+    opacity: 1;
+  }
+  .t-img3 .hover-overlay2{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right:0;
+    width: 470px;
+    height: 450px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha (0.3) as per your preference */
+    opacity: 0;
+    transition: opacity 0.5s;
+ }
+ .t:hover .hover-overlay2{
+    opacity: 1;
+  }
+ .t .hover-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+ }
+ .t .hover-text p{
+    color:antiquewhite;
+    font-size: 40px;
+    font-weight: bold;
+ }
+ .t-img1:hover .hover-text,
+.t-img2:hover .hover-text,
+.t-img3:hover .hover-text {
+  opacity: 1;
+}
+ .t .hover-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: antiquewhite;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+ }
+ .t .hover-text p{
+    color:antiquewhite;
+    font-size: 40px;
+    font-weight: bold;
+ }
+ .t-img1:hover .hover-text,
+.t-img2:hover .hover-text,
+.t-img3:hover .hover-text {
+  opacity: 1;
+}
  @keyframes fadeUp {
     0% {
         opacity: 0;

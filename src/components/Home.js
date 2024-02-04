@@ -1,12 +1,28 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Nav from './Nav.js';
 import Homeimg from '../assets/bg2.jpg';
 import Homeimg1 from '../assets/home2.avif';
 import Homeimg2 from '../assets/home.jpg';
 import Homeimg3 from '../assets/home4.avif';
-import Homeimg4 from '../assets/home5.jpg';
-import Homeimg5 from '../assets/offer.jpg';
+import Homeimg4 from '../assets/home7.jpeg';
+import Homeimg5 from '../assets/home8.jpeg';
 function Home() {
+  const [hoveredImg1, setHoveredImg1] = useState(false);
+  const [hoveredImg2, setHoveredImg2] = useState(false);
+  const [hoveredImg3, setHoveredImg3] = useState(false);
+
+  const handleHoverImg1 = () => {
+    setHoveredImg1(!hoveredImg1);
+  };
+
+  const handleHoverImg2 = () => {
+    setHoveredImg2(!hoveredImg2);
+  };
+
+  const handleHoverImg3 = () => {
+    setHoveredImg3(!hoveredImg3);
+  };
+
   return (
     <div className="home-container">
         <Nav/>
@@ -41,14 +57,38 @@ function Home() {
           
         </div>
         <div className="t">
-          <div className="t-img1">
+          <div className="t-img1" onMouseEnter={handleHoverImg1} onMouseLeave={handleHoverImg1}>
             <img src={Homeimg2}></img>
+            {hoveredImg1 && (
+             <div className="hover-overlay"></div>
+            )}
+            {hoveredImg1 && (
+            <div className="hover-text">
+              <p>Indoor Plants</p>
+            </div>
+          )}
           </div>
-          <div className="t-img2">
+          <div className="t-img2" onMouseEnter={handleHoverImg2} onMouseLeave={handleHoverImg2}>
           <img src={Homeimg4}></img>
+          {hoveredImg2 && (
+          <div className="hover-overlay1"></div>
+          )}
+          {hoveredImg2 && (
+            <div className="hover-text">
+              <p>Plant&Stand</p>
+            </div>
+          )}
           </div>
-          <div className="t-img3">
+          <div className="t-img3" onMouseEnter={handleHoverImg3} onMouseLeave={handleHoverImg3}>
           <img src={Homeimg5}></img>
+          {hoveredImg3 && (
+           <div className="hover-overlay2"></div>
+         )}
+          {hoveredImg3 && (
+            <div className="hover-text">
+              <p>Pot Plants</p>
+            </div>
+          )}
           </div>
         </div>
 
